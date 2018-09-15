@@ -12,18 +12,7 @@ import java.util.Vector;
 			// TODO Auto-generated constructor stub
 		}
 	}
-	public int[][] updateMatrix(int[][] matrix) {
 
-import java.util.Arrays;
-import java.util.Vector;class Solution {
-    class Point{
-		int x,y;
-		public Point(int x,int y) {
-			this.x=x;
-			this.y=y;
-			// TODO Auto-generated constructor stub
-		}
-	}
     	public int[][] updateMatrix(int[][] matrix) {
         int x = matrix.length;
 		int y = matrix[0].length;
@@ -38,7 +27,6 @@ import java.util.Vector;class Solution {
 			if(matrix[i][j]==1){
                 matrix[i][j]=2147483647;
 				for(int p=0;p<vector.size();p++){
-					
 					matrix[i][j]=Math.min(matrix[i][j],Math.abs(vector.get(p).x-i)+Math.abs(vector.get(p).y-j));
 				}
 			}
@@ -46,8 +34,8 @@ import java.util.Vector;class Solution {
 		}
 		return matrix;
         }
-}
-	}
+
+	
 	
 	public static void main(String[] args) {
 		int a[][] = {{1, 0, 1, 0, 0, 0, 1, 1, 1, 1}, {1, 1, 1, 0, 1, 1, 1, 1, 0, 1}, {1, 0, 1, 1, 1, 1, 0, 1, 0, 0}, {1, 0, 1, 1, 1, 0, 1, 1, 1, 1}, {1, 1, 0, 1, 1, 1, 1, 0, 0, 0}, {1, 1, 0, 0, 1, 0, 1, 1, 0, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 0, 0, 0, 1, 1, 1, 0, 0}, {0, 1, 1, 1, 0, 0, 1, 0, 1, 1}, {1, 1, 0, 0, 0, 1, 0, 1, 1, 0}};
