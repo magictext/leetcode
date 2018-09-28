@@ -7,5 +7,4 @@ for l in range(1, min(N, 20), 2):
             node = TreeNode(0)
             node.left = left
             node.right = right
-            
             ans += [node]
