@@ -1,11 +1,12 @@
-package ea_100;
+package ea_101;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import addOneRowtoTree.TreeNode;
 
 public class Solution {
-	boolean flag = true;
+	boolean flag=true;
 	private void inOrder(TreeNode node1, TreeNode node2) {
 		if (!flag) {
 			return;
@@ -23,15 +24,19 @@ public class Solution {
 					if (node1.val != node2.val) {
 						flag = false;
 					}
-					inOrder(node1.left, node2.left);
-					inOrder(node1.right, node2.right);
+					inOrder(node1.left, node2.right);
+					inOrder(node1.right, node2.left);
 				}
 			}
 		}
 	}
 
-	public boolean isSameTree(TreeNode p, TreeNode q) {
-		inOrder(p, q);
+	public boolean isSymmetric(TreeNode root) {
+		flag=true;
+		inOrder(root, root);
 		return flag;
+    }	
+	public static void main(String[] args) {
+		System.out.println(new ArrayList<>().equals(new ArrayList<>()));
 	}
 }
